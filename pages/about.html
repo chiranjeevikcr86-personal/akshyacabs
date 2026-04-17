@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Akshaya Travels Tirupati | 20 Years of Trusted Travel</title>
+  <meta name="description" content="Learn about Akshaya Travels, founded by S. Ravi Kumar with 20+ years of experience in pilgrimage and leisure travel from Tirupati, Andhra Pradesh."/>
+  <link rel="icon" href="../images/brand/favicon.png"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/packages.css"/>
+  <style>
+    .about-hero-bg { background-image: url('../images/hero/about-hero-bg.jpg'); }
+    .founder-section { background: var(--ivory); padding: 80px 0; }
+    .founder-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: center; }
+    .founder-img-wrap { position: relative; }
+    .founder-img-wrap img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+    .founder-badge {
+      position: absolute; bottom: -20px; right: -20px;
+      background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+      color: var(--white); border-radius: var(--radius-md);
+      padding: 18px 22px; text-align: center; box-shadow: var(--shadow-md);
+    }
+    .founder-badge .years { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; display: block; line-height: 1; }
+    .founder-badge .label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; opacity: 0.9; }
+    .founder-body h2 { color: var(--maroon); margin-bottom: 6px; }
+    .founder-title { color: var(--saffron); font-weight: 600; font-size: 1rem; margin-bottom: 20px; display: block; }
+    .founder-body p { color: var(--muted); margin-bottom: 16px; font-size: 0.97rem; }
+    .founder-contacts { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+    .founder-contact-row { display: flex; align-items: center; gap: 12px; }
+    .founder-contact-row a { color: var(--maroon); font-weight: 600; font-size: 1rem; }
+    .founder-contact-row a:hover { color: var(--saffron); }
+    .contact-icon { width: 38px; height: 38px; background: rgba(123,28,46,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .values-section { background: var(--cream); padding: 80px 0; }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+    .value-card { background: var(--white); border-radius: var(--radius-md); padding: 32px 24px; text-align: center; box-shadow: var(--shadow-sm); border-bottom: 3px solid var(--gold); transition: var(--transition); }
+    .value-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .value-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+    .value-card h4 { color: var(--maroon); margin-bottom: 10px; }
+    .value-card p { color: var(--muted); font-size: 0.87rem; }
+    .fleet-about { background: var(--charcoal); padding: 80px 0; }
+    .fleet-about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .fleet-about-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.2); border-radius: var(--radius-md); overflow: hidden; transition: var(--transition); }
+    .fleet-about-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .fleet-about-card img { width: 100%; height: 180px; object-fit: contain; background: rgba(255,255,255,0.03); padding: 12px; }
+    .fleet-about-body { padding: 20px; }
+    .fleet-about-body h4 { color: var(--cream); margin-bottom: 6px; }
+    .fleet-spec { display: flex; gap: 8px; flex-wrap: wrap; }
+    .fleet-spec span { font-size: 0.75rem; color: var(--muted); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 10px; }
+    .fleet-price { color: var(--gold); font-weight: 600; font-size: 0.9rem; margin-top: 10px; display: block; }
+    .divine-about { background: linear-gradient(135deg, var(--maroon-dark), var(--maroon)); padding: 70px 0; }
+    .divine-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .divine-about-text h2 { color: var(--cream); margin-bottom: 16px; }
+    .divine-about-text p { color: rgba(245,236,215,0.85); margin-bottom: 14px; font-size: 0.97rem; }
+    .divine-about-imgs { display: flex; gap: 24px; justify-content: center; }
+    .divine-about-imgs img { width: 160px; height: 220px; object-fit: cover; border-radius: var(--radius-md); border: 2px solid rgba(212,175,55,0.5); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+    @media(max-width:900px) {
+      .founder-grid { grid-template-columns: 1fr; }
+      .founder-img-wrap { max-width: 380px; margin: 0 auto; }
+      .founder-badge { bottom: -10px; right: -10px; }
+      .divine-about-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:600px) { .divine-about-imgs img { width: 130px; height: 180px; } }
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../images/brand/logo-akshaya-travels-white.png" alt="Akshaya Travels"/></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="packages.html">Tour Packages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div class="lang-toggle"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="te">తె</button></div>
+      <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">Book a Tour</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a><a href="about.html">About</a><a href="packages.html">Tour Packages</a><a href="contact.html">Contact</a>
+  <div class="lang-toggle" style="margin-top:20px;"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="te">తె</button></div>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:24px;justify-content:center;">Book a Tour</a>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg about-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › About Us</div>
+      <h1>About Akshaya Travels</h1>
+      <p>Two decades of devotion, trust, and seamless journeys — rooted in Tirupati, reaching every sacred corner of India.</p>
+    </div>
+  </div>
+</section>
+<!-- FOUNDER SECTION -->
+<section class="founder-section">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-img-wrap fade-up">
+        <img src="../images/about/founder-ravi-kumar.jpg" alt="S. Ravi Kumar — Founder, Akshaya Travels"/>
+        <div class="founder-badge"><span class="years">20+</span><span class="label">Years of Excellence</span></div>
+      </div>
+      <div class="founder-body fade-up">
+        <span class="section-tag">Our Founder</span>
+        <h2>S. Ravi Kumar</h2>
+        <span class="founder-title">Founder &amp; Managing Director, Akshaya Travels</span>
+        <p>With over <strong>20 years of dedicated experience</strong> in the travel industry, S. Ravi Kumar built Akshaya Travels from the ground up with a single vision — to make every pilgrimage and leisure journey from Tirupati a truly blessed and seamless experience.</p>
+        <p>Born and raised in Tirupati, Ravi Kumar garu has an intimate knowledge of every pilgrim route, sacred site, and hidden gem across South India and beyond. His passion for service, combined with deep spiritual values, has earned Akshaya Travels the trust of thousands of families over the years.</p>
+        <p>Under his leadership, the company has expanded from local Tirupati tours to pan-India packages including Char Dham, Aru Padai Yatra, and Pancha Bhoota Lingas — always maintaining the same personal touch and commitment to quality.</p>
+        <blockquote style="border-left:3px solid var(--gold);padding-left:18px;margin:20px 0;font-family:var(--font-quote);font-style:italic;color:var(--maroon);font-size:1.05rem;">"Every journey is a prayer. We are just the vehicle that carries your devotion to the divine."</blockquote>
+        <div class="founder-contacts">
+          <div class="founder-contact-row">
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7B1C2E" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.27 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><a href="tel:+919393900006">+91 93939 00006</a><br/><a href="tel:+917288876667" style="color:var(--muted);font-size:0.88rem;font-weight:400;">+91 72888 76667</a></div>
+          </div>
+          <div class="founder-contact-row">
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7B1C2E" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <p style="color:var(--muted);font-size:0.9rem;margin:0;">Madura Nagar, DO.NO. 18-38-S3-314, Tirupati – 517 501, Andhra Pradesh</p>
+          </div>
+        </div>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Book a Tour</a>
+          <a href="https://wa.me/919393900006" class="btn btn-maroon" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- VALUES SECTION -->
+<section class="values-section">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:48px;">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">Our Core Values</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-up"><span class="value-icon">🛕</span><h4>Spiritual Commitment</h4><p>We treat every journey as a pilgrimage — with reverence, care, and deep respect for your faith.</p></div>
+      <div class="value-card fade-up"><span class="value-icon">🤝</span><h4>20 Years of Trust</h4><p>Thousands of families have placed their trust in us. We honour that with consistent, reliable service.</p></div>
+      <div class="value-card fade-up"><span class="value-icon">🚗</span><h4>Premium Fleet</h4><p>Clean, air-conditioned, GPS-tracked vehicles with experienced, courteous professional drivers.</p></div>
+      <div class="value-card fade-up"><span class="value-icon">📞</span><h4>24/7 Support</h4><p>We're available day and night. Any query, any emergency — Ravi Kumar garu is just a call away.</p></div>
+      <div class="value-card fade-up"><span class="value-icon">💰</span><h4>Transparent Pricing</h4><p>No hidden charges. Clear, upfront pricing for all packages. What we quote is what you pay.</p></div>
+      <div class="value-card fade-up"><span class="value-icon">🗺️</span><h4>Local Expertise</h4><p>Deep knowledge of pilgrimage routes, darshan timings, and local customs — built over 20 years.</p></div>
+    </div>
+  </div>
+</section>
+<!-- FLEET SECTION -->
+<section class="fleet-about">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:48px;">
+      <span class="section-tag" style="color:var(--saffron);">Our Fleet</span>
+      <h2 style="color:var(--cream);">Vehicles for Every Group Size</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="fleet-about-grid">
+      <div class="fleet-about-card fade-up"><img src="../images/fleet/car-maruti-dzire.jpg" alt="Maruti Dzire"/><div class="fleet-about-body"><h4>Maruti Suzuki Dzire</h4><div class="fleet-spec"><span>4+1 Seater</span><span>AC</span><span>Compact Sedan</span></div><span class="fleet-price">From ₹14/km</span></div></div>
+      <div class="fleet-about-card fade-up"><img src="../images/fleet/car-toyota-ertiga.jpg" alt="Toyota Ertiga"/><div class="fleet-about-body"><h4>Toyota Ertiga</h4><div class="fleet-spec"><span>6+1 Seater</span><span>AC</span><span>MPV</span></div><span class="fleet-price">From ₹16/km</span></div></div>
+      <div class="fleet-about-card fade-up"><img src="../images/fleet/car-toyota-innova.jpg" alt="Toyota Innova"/><div class="fleet-about-body"><h4>Toyota Innova</h4><div class="fleet-spec"><span>7+1 Seater</span><span>AC</span><span>MUV</span></div><span class="fleet-price">From ₹18/km</span></div></div>
+      <div class="fleet-about-card fade-up"><img src="../images/fleet/car-innova-crysta.jpg" alt="Innova Crysta"/><div class="fleet-about-body"><h4>Innova Crysta</h4><div class="fleet-spec"><span>7+1 Seater</span><span>Premium AC</span><span>Best Seller</span></div><span class="fleet-price">From ₹20/km</span></div></div>
+      <div class="fleet-about-card fade-up"><img src="../images/fleet/car-tempo-traveller.jpg" alt="Tempo Traveller"/><div class="fleet-about-body"><h4>Force Tempo Traveller</h4><div class="fleet-spec"><span>12+1 Seater</span><span>AC</span><span>Group Tours</span></div><span class="fleet-price">From ₹22/km</span></div></div>
+      <div class="fleet-about-card fade-up"><img src="../images/fleet/car-force-urbania.jpg" alt="Force Urbania"/><div class="fleet-about-body"><h4>Force Urbania</h4><div class="fleet-spec"><span>17+1 Seater</span><span>Luxury</span><span>Large Groups</span></div><span class="fleet-price">From ₹35/km</span></div></div>
+    </div>
+  </div>
+</section>
+<!-- DIVINE SECTION -->
+<section class="divine-about">
+  <div class="container">
+    <div class="divine-about-grid">
+      <div class="divine-about-text fade-up">
+        <span class="section-tag" style="color:var(--gold-light);">Our Family Deities</span>
+        <h2>Blessed at Every Step</h2>
+        <p>The Ravi Kumar family places their complete faith in <strong style="color:var(--gold);">Lord Venkateswara</strong> of Tirumala and <strong style="color:var(--gold);">Lord Murugan</strong>. Every journey undertaken by Akshaya Travels begins with a prayer to these divine presences.</p>
+        <p>It is this spiritual foundation that has guided Akshaya Travels for over two decades — ensuring that every traveller who books with us is not just transported, but truly blessed on their journey.</p>
+        <blockquote style="border-left:3px solid var(--gold);padding-left:18px;margin-top:20px;font-family:var(--font-quote);font-style:italic;color:var(--gold-light);font-size:1.05rem;">"Om Namo Venkatesaya · Vel Muruga Haro Hara"</blockquote>
+      </div>
+      <div class="divine-about-imgs fade-up">
+        <img src="../images/divine/lord-venkateswara.jpg" alt="Lord Venkateswara"/>
+        <img src="../images/divine/lord-murugan.jpg" alt="Lord Murugan"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../images/brand/logo-akshaya-travels-white.png" alt="Akshaya Travels"/><p>20 years of trusted pilgrim &amp; leisure travel from Tirupati. Serving devotees and travellers across India and beyond.</p></div>
+      <div class="footer-col"><h5>Quick Links</h5><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="packages.html">Tour Packages</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Popular Tours</h5><a href="packages.html#tirupati">Tirupati Surroundings</a><a href="packages.html#aru">Aru Padai Yatra</a><a href="packages.html#pancha">Pancha Bhoota Lingas</a><a href="packages.html#south">South India Tours</a><a href="packages.html#north">Char Dham Yatra</a></div>
+      <div class="footer-col"><h5>Contact Us</h5>
+        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.27 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div><a href="tel:+919393900006">+91 93939 00006</a><a href="tel:+917288876667">+91 72888 76667</a></div></div>
+        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p>Madura Nagar, Tirupati – 517 501, AP</p></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Akshaya Travels, Tirupati. All rights reserved.</p><p class="deity-note">🙏 Blessed by Lord Venkateswara &amp; Lord Murugan</p></div>
+  </div>
+</footer>
+<a href="https://wa.me/919393900006" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script src="../js/main.js"></script>
+</body>
+</html>

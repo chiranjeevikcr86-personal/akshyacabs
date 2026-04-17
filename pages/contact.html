@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact &amp; Book a Tour – Akshaya Travels Tirupati</title>
+  <meta name="description" content="Book a tour or contact Akshaya Travels, Tirupati. Call +91 93939 00006 or fill our enquiry form. We respond within 24 hours."/>
+  <link rel="icon" href="../images/brand/favicon.png"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/packages.css"/>
+  <style>
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
+    .contact-info-card { background: var(--white); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-md); border-top: 4px solid var(--gold); }
+    .contact-info-card h3 { color: var(--maroon); margin-bottom: 24px; }
+    .cinfo-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
+    .cinfo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, rgba(232,135,26,0.15), rgba(123,28,46,0.1)); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cinfo-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--saffron); margin-bottom: 4px; }
+    .cinfo-value { color: var(--brown); font-size: 0.95rem; font-weight: 500; }
+    .cinfo-value a { color: var(--maroon); font-weight: 600; }
+    .cinfo-value a:hover { color: var(--saffron); }
+    .wa-btn-big { display: flex; align-items: center; gap: 12px; background: #25D366; color: #fff; border-radius: 50px; padding: 14px 24px; font-weight: 600; margin-top: 28px; justify-content: center; transition: var(--transition); font-size: 1rem; }
+    .wa-btn-big:hover { background: #1da851; transform: translateY(-2px); }
+    .form-card { background: var(--white); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-md); border-top: 4px solid var(--saffron); }
+    .form-card h3 { color: var(--maroon); margin-bottom: 6px; }
+    .form-card .form-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--brown); margin-bottom: 6px; letter-spacing: 0.02em; }
+    .form-group label span { color: var(--saffron); }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 16px; border: 1.5px solid rgba(0,0,0,0.12);
+      border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.92rem;
+      color: var(--brown); background: var(--ivory); transition: border-color var(--transition);
+      outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--saffron); background: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit { width: 100%; padding: 16px; background: linear-gradient(135deg, var(--saffron), var(--saffron-dark)); color: var(--white); border-radius: 50px; font-size: 1rem; font-weight: 700; letter-spacing: 0.03em; transition: var(--transition); margin-top: 8px; }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,135,26,0.4); }
+    .form-note { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 12px; }
+    .map-section { background: var(--cream); padding: 60px 0; }
+    .map-wrap { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); height: 380px; }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; }
+    .success-msg { display: none; background: #e8f5e9; border: 1px solid #4caf50; border-radius: var(--radius-sm); padding: 16px 20px; color: #2e7d32; font-weight: 500; margin-bottom: 20px; text-align: center; }
+    @media(max-width:900px) { .contact-layout { grid-template-columns: 1fr; } }
+    @media(max-width:600px) { .form-row { grid-template-columns: 1fr; } .form-card,.contact-info-card { padding: 24px; } }
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../images/brand/logo-akshaya-travels-white.png" alt="Akshaya Travels"/></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="packages.html">Tour Packages</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div class="lang-toggle"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="te">తె</button></div>
+      <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">Book a Tour</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a><a href="about.html">About</a><a href="packages.html">Tour Packages</a><a href="contact.html">Contact</a>
+  <div class="lang-toggle" style="margin-top:20px;"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="te">తె</button></div>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero" style="min-height:320px;">
+  <div class="page-hero-bg" style="background-image:url('../images/hero/hero-car-mountain-road.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › Contact</div>
+      <h1>Book a Tour</h1>
+      <p>Tell us your travel plan — we will get back to you within 24 hours with the best options and pricing.</p>
+    </div>
+  </div>
+</section>
+<!-- CONTACT SECTION -->
+<section class="section-pad" style="background:var(--ivory);">
+  <div class="container">
+    <div class="contact-layout">
+      <!-- Contact Info -->
+      <div>
+        <div class="contact-info-card fade-up">
+          <h3>Get in Touch</h3>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8871A" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.27 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="cinfo-label">Phone (Primary &amp; WhatsApp)</div><div class="cinfo-value"><a href="tel:+919393900006">+91 93939 00006</a></div><div class="cinfo-value" style="font-weight:400;font-size:0.88rem;margin-top:4px;"><a href="tel:+917288876667">+91 72888 76667</a></div></div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8871A" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="cinfo-label">Email</div><div class="cinfo-value"><a href="mailto:akshayatravels9799@gmail.com">akshayatravels9799@gmail.com</a></div></div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8871A" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="cinfo-label">Address</div><div class="cinfo-value">DO.NO. 18-38-S3-314, Madura Nagar,<br/>Tirupati – 517 501, Andhra Pradesh</div></div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8871A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><div class="cinfo-label">Availability</div><div class="cinfo-value">24 / 7 — Every day including holidays</div></div>
+          </div>
+          <a href="https://wa.me/919393900006?text=Hello%20Akshaya%20Travels%2C%20I%20would%20like%20to%20book%20a%20tour." class="wa-btn-big" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <!-- Booking Form -->
+      <div class="form-card fade-up">
+        <h3>Tour Enquiry Form</h3>
+        <p class="form-sub">Fill in your details and preferred tour. We will call you back within 24 hours.</p>
+        <div class="success-msg" id="successMsg">✅ Thank you! Your enquiry has been sent. We will contact you within 24 hours.</div>
+        <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group"><label for="name">Full Name <span>*</span></label><input type="text" id="name" name="name" placeholder="Your full name" required/></div>
+            <div class="form-group"><label for="phone">Mobile Number <span>*</span></label><input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com"/></div>
+            <div class="form-group"><label for="city">Your City <span>*</span></label><input type="text" id="city" name="city" placeholder="e.g. Hyderabad" required/></div>
+          </div>
+          <div class="form-group"><label for="tour">Tour Package <span>*</span></label>
+            <select id="tour" name="tour" required>
+              <option value="">— Select a Package —</option>
+              <optgroup label="Tirupati Surroundings">
+                <option>Full Divine Circuit (All 7 Temples)</option>
+                <option>Tirumala Darshan</option>
+                <option>Srikalahasti Temple</option>
+                <option>Kanipakam Vinayaka</option>
+                <option>Half-Day Local Tirupati</option>
+              </optgroup>
+              <optgroup label="South India">
+                <option>Tamil Nadu Temple Tour (7 Days)</option>
+                <option>Kerala 7-Day Tour</option>
+                <option>Karnataka 5-Day Tour</option>
+                <option>Goa 4-Day Tour</option>
+                <option>Srisailam Pilgrimage</option>
+                <option>Rameswaram &amp; Kanyakumari</option>
+              </optgroup>
+              <optgroup label="Special Packages">
+                <option>Andhra Pradesh Temple Trail (3 Days)</option>
+                <option>Puri &amp; Bhubaneswar (5 Days)</option>
+                <option>Hyderabad &amp; Warangal (2 Days)</option>
+              </optgroup>
+              <optgroup label="Aru Padai Yatra">
+                <option>Aru Padai Yatra – 3 Days</option>
+                <option>Complete Aru Padai Yatra – 5 Days</option>
+              </optgroup>
+              <optgroup label="Pancha Bhoota Lingas">
+                <option>Pancha Bhoota Partial Circuit (2 Days)</option>
+                <option>Complete Pancha Bhoota Lingas (4 Days)</option>
+              </optgroup>
+              <optgroup label="North India">
+                <option>Char Dham Yatra (12 Days)</option>
+                <option>Varanasi · Ayodhya · Prayagraj (5 Days)</option>
+                <option>Rajasthan Spiritual Trail (7 Days)</option>
+              </optgroup>
+              <option>Custom / Other Package</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="date">Preferred Date</label><input type="date" id="date" name="preferred_date"/></div>
+            <div class="form-group"><label for="passengers">No. of Passengers <span>*</span></label>
+              <select id="passengers" name="passengers" required>
+                <option value="">— Select —</option>
+                <option>1–2 (Dzire / Ertiga)</option>
+                <option>3–4 (Dzire / Ertiga)</option>
+                <option>5–7 (Innova / Crysta)</option>
+                <option>8–12 (Tempo Traveller)</option>
+                <option>13–17 (Force Urbania)</option>
+                <option>18+ (Multiple Vehicles)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label for="message">Additional Requirements</label><textarea id="message" name="message" placeholder="Any special requests, accessibility needs, specific temples to visit, hotel preferences, etc."></textarea></div>
+          <input type="hidden" name="_subject" value="New Tour Enquiry – Akshaya Travels"/>
+          <input type="hidden" name="_next" value="https://akshayatravels.in/pages/contact.html?sent=1"/>
+          <button type="submit" class="form-submit" id="submitBtn">🙏 Send Enquiry</button>
+          <p class="form-note">We respond within 24 hours. You can also WhatsApp us directly for instant reply.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- MAP SECTION -->
+<section class="map-section">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:32px;">
+      <span class="section-tag">Find Us</span>
+      <h2 class="section-title">Our Location</h2>
+      <div class="divider-gold"></div>
+      <p class="section-subtitle">Madura Nagar, Tirupati – 517 501, Andhra Pradesh</p>
+    </div>
+    <div class="map-wrap fade-up">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.3!2d79.4192!3d13.6288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b5a0f0e0000%3A0x0!2sMadura+Nagar%2C+Tirupati%2C+Andhra+Pradesh+517501!5e0!3m2!1sen!2sin!4v1697000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../images/brand/logo-akshaya-travels-white.png" alt="Akshaya Travels"/><p>20 years of trusted pilgrim &amp; leisure travel from Tirupati. Serving devotees and travellers across India and beyond.</p></div>
+      <div class="footer-col"><h5>Quick Links</h5><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="packages.html">Tour Packages</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Popular Tours</h5><a href="packages.html#tirupati">Tirupati Surroundings</a><a href="packages.html#aru">Aru Padai Yatra</a><a href="packages.html#pancha">Pancha Bhoota Lingas</a><a href="packages.html#south">South India Tours</a><a href="packages.html#north">Char Dham Yatra</a></div>
+      <div class="footer-col"><h5>Contact Us</h5>
+        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.27 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div><a href="tel:+919393900006">+91 93939 00006</a><a href="tel:+917288876667">+91 72888 76667</a></div></div>
+        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:akshayatravels9799@gmail.com">akshayatravels9799@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Akshaya Travels, Tirupati. All rights reserved.</p><p class="deity-note">🙏 Blessed by Lord Venkateswara &amp; Lord Murugan</p></div>
+  </div>
+</footer>
+<a href="https://wa.me/919393900006" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script src="../js/main.js"></script>
+<script>
+  // Show success if redirected back after form submit
+  if (window.location.search.includes('sent=1')) {
+    document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('bookingForm').style.display = 'none';
+  }
+</script>
+</body>
+</html>

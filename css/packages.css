@@ -1,0 +1,333 @@
+/* ============================================================
+   AKSHAYA TRAVELS — Packages Page Styles
+   ============================================================ */
+
+/* ── Page Hero (inner pages) ───────────────────────────────── */
+.page-hero {
+  min-height: 380px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 48px;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(26,20,16,0.55) 0%, rgba(26,20,16,0.88) 100%);
+}
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+}
+.page-hero-content .breadcrumb {
+  font-size: 0.82rem;
+  color: rgba(245,236,215,0.7);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-hero-content .breadcrumb a { color: var(--gold); }
+.page-hero-content h1 { color: var(--white); margin-bottom: 10px; }
+.page-hero-content p  { color: rgba(245,236,215,0.85); font-size: 1.05rem; max-width: 540px; }
+
+/* ── Package Tabs ──────────────────────────────────────────── */
+.pkg-tabs-section { background: var(--ivory); }
+
+.tabs-sticky {
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  border-bottom: 2px solid rgba(212,175,55,0.2);
+}
+.tabs-nav {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs-nav::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex-shrink: 0;
+  padding: 18px 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 3px solid transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+}
+.tab-btn:hover { color: var(--maroon); }
+.tab-btn.active {
+  color: var(--maroon);
+  border-bottom-color: var(--saffron);
+  background: rgba(232,135,26,0.04);
+}
+.tab-btn .tab-icon { font-size: 1.1rem; }
+
+/* Tab panels */
+.tab-panel { display: none; padding: 60px 0; }
+.tab-panel.active { display: block; }
+
+/* ── Package Detail Card ───────────────────────────────────── */
+.pkg-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.pkg-detail-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(212,175,55,0.15);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.pkg-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.pkg-detail-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+.pkg-detail-img {
+  height: 240px;
+  overflow: hidden;
+}
+.pkg-detail-card.featured .pkg-detail-img { height: 100%; min-height: 300px; }
+.pkg-detail-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.pkg-detail-card:hover .pkg-detail-img img { transform: scale(1.06); }
+.pkg-detail-body { padding: 28px; }
+.pkg-detail-body .pkg-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: 8px;
+}
+.pkg-detail-body h3 {
+  color: var(--maroon);
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+.pkg-places {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.place-tag {
+  background: rgba(123,28,46,0.08);
+  color: var(--maroon);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(123,28,46,0.15);
+}
+.pkg-info-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 14px;
+  background: var(--ivory);
+  border-radius: var(--radius-sm);
+}
+.pkg-info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.pkg-info-item strong { color: var(--brown); }
+.pkg-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.pkg-price-main {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--saffron);
+}
+.pkg-price-main small {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ── Local Packages Table ──────────────────────────────────── */
+.local-pkg-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+}
+.local-pkg-table thead {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+  color: var(--cream);
+}
+.local-pkg-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.local-pkg-table td {
+  padding: 14px 20px;
+  font-size: 0.88rem;
+  color: var(--brown);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  vertical-align: middle;
+}
+.local-pkg-table tr:last-child td { border-bottom: none; }
+.local-pkg-table tr:nth-child(even) td { background: rgba(253,246,236,0.6); }
+.local-pkg-table .price-cell {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--saffron);
+  font-size: 1rem;
+}
+
+/* Temple list */
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.temple-card {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-left: 4px solid var(--gold);
+  transition: var(--transition);
+}
+.temple-card:hover {
+  background: var(--ivory);
+  border-left-color: var(--saffron);
+  transform: translateX(4px);
+}
+.temple-num {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(212,175,55,0.3);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.temple-name {
+  font-weight: 600;
+  color: var(--maroon);
+  font-size: 0.92rem;
+  margin-bottom: 2px;
+}
+.temple-loc {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.temple-element {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(232,135,26,0.1);
+  color: var(--saffron);
+}
+
+/* Section intro */
+.tab-intro {
+  background: linear-gradient(135deg, rgba(123,28,46,0.06), rgba(232,135,26,0.04));
+  border-left: 4px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+}
+.tab-intro p { color: var(--brown); font-size: 0.95rem; margin: 0; }
+
+/* CTA Banner */
+.pkg-cta-banner {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+  border-radius: var(--radius-md);
+  padding: 48px;
+  text-align: center;
+  margin-top: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.pkg-cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/textures/bg-lotus-pattern.png') center/250px;
+  opacity: 0.05;
+}
+.pkg-cta-banner h3 {
+  color: var(--cream);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  position: relative;
+}
+.pkg-cta-banner p {
+  color: rgba(245,236,215,0.8);
+  margin-bottom: 28px;
+  position: relative;
+}
+.pkg-cta-banner .cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pkg-detail-grid { grid-template-columns: 1fr; }
+  .pkg-detail-card.featured { grid-column: 1; display: block; }
+  .pkg-detail-card.featured .pkg-detail-img { height: 240px; }
+}
+@media (max-width: 600px) {
+  .tab-btn { padding: 14px 16px; font-size: 0.8rem; }
+  .pkg-detail-body { padding: 20px; }
+  .pkg-cta-banner { padding: 32px 20px; }
+  .temple-grid { grid-template-columns: 1fr 1fr; }
+  .tabs-sticky { top: 60px; }
+}
