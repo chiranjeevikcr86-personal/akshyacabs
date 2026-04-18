@@ -797,10 +797,33 @@ p  { font-size: 1rem; line-height: 1.75; }
 @media (max-width: 768px) {
 
   /* Navbar */
-  .nav-links   { display: none; }
-  .lang-toggle { display: none; }
-  .phone-nav-wrap { display: none; }
-  .hamburger   { display: flex; }
+  .nav-links      { display: none; }
+  .hamburger      { display: flex; }
+
+  /* Keep lang toggle + contact visible on mobile — hide Book a Tour from nav */
+  .nav-book-btn   { display: none !important; }
+
+  /* Compact lang buttons for mobile */
+  .lang-toggle { display: flex; }
+  .lang-btn {
+    padding: 5px 9px;
+    font-size: 0.72rem;
+    min-width: unset;
+  }
+
+  /* Compact phone contact button for mobile */
+  .btn-phone-nav {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+  }
+  .btn-phone-nav svg { width: 13px; height: 13px; }
+
+  /* Phone dropdown opens upward on mobile (avoid going off screen) */
+  .phone-nav-dropdown {
+    top: unset;
+    bottom: calc(100% + 8px);
+    right: 0;
+  }
 
   /* Hero */
   .hero { min-height: 90vh; }
