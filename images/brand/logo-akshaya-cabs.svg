@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56" role="img" aria-label="Akshaya Cabs">
+  <defs>
+    <linearGradient id="gld" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8DC5A"/>
+      <stop offset="100%" stop-color="#C49010"/>
+    </linearGradient>
+    <linearGradient id="sff" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F09030"/>
+      <stop offset="100%" stop-color="#C06808"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ════════════════════════
+       CAR ICON  (48 × 40 px)
+       Clean bold iconic shapes
+       ════════════════════════ -->
+
+  <!-- Body: bold flat rectangle -->
+  <rect x="2" y="30" width="48" height="12" rx="4" fill="url(#gld)"/>
+
+  <!-- Cabin: clean low trapezoid -->
+  <path d="M10,30 L16,14 L38,14 L44,30 Z" fill="url(#gld)"/>
+
+  <!-- Glass: single dark pane -->
+  <path d="M14,29 L19,15 L35,15 L40,29 Z" fill="rgba(6,4,18,0.80)"/>
+
+  <!-- B-pillar: subtle post -->
+  <rect x="26" y="15" width="2" height="14" fill="rgba(212,175,40,0.40)"/>
+
+  <!-- Headlight strip -->
+  <rect x="46" y="33" width="4" height="6" rx="2" fill="#F09030" opacity="0.95"/>
+
+  <!-- Tail light -->
+  <rect x="2"  y="33" width="3" height="6" rx="2" fill="#8B2035" opacity="0.88"/>
+
+  <!-- Rear wheel -->
+  <circle cx="14" cy="44" r="7" fill="#0A0818" stroke="url(#gld)" stroke-width="2.5"/>
+  <circle cx="14" cy="44" r="2.8" fill="url(#gld)"/>
+  <circle cx="14" cy="44" r="1.1" fill="#0A0818"/>
+
+  <!-- Front wheel -->
+  <circle cx="38" cy="44" r="7" fill="#0A0818" stroke="url(#gld)" stroke-width="2.5"/>
+  <circle cx="38" cy="44" r="2.8" fill="url(#gld)"/>
+  <circle cx="38" cy="44" r="1.1" fill="#0A0818"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="26" cy="53" rx="26" ry="1.8" fill="rgba(212,175,55,0.09)"/>
+
+  <!-- ════════
+       DIVIDER
+       ════════ -->
+  <line x1="60" y1="6" x2="60" y2="50" stroke="rgba(212,175,55,0.25)" stroke-width="1"/>
+
+  <!-- ════════════
+       BRAND TEXT
+       ════════════ -->
+
+  <!-- "Akshaya" — gold serif heading -->
+  <text x="70" y="30"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="23" font-weight="700"
+        fill="url(#gld)" letter-spacing="1.2">Akshaya</text>
+
+  <!-- "CABS" — bold saffron spaced caps -->
+  <text x="71" y="45"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="12" font-weight="800"
+        fill="url(#sff)" letter-spacing="9">CABS</text>
+
+  <!-- Tagline -->
+  <text x="70" y="54"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="7" fill="rgba(245,236,215,0.38)" letter-spacing="1.1">Est. 2004 · Tirupati</text>
+</svg>
